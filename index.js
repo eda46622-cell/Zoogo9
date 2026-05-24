@@ -18,7 +18,6 @@ const animalFacts = {
     const modalTitle = document.getElementById('mTitle');
     const modalText = document.getElementById('mText');
     const closeBtn = backdrop.querySelector('.modal-close-btn');
-х
     const animalCards = document.querySelectorAll('.animal-column');
 
     animalCards.forEach(card => {
