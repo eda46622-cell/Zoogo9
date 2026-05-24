@@ -3,100 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZooGO — Главная</title>
+    <title>ZooGO</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
-        <div class="logo">ZooGO 🐾</div>
-        <div class="pagination">
-            <button class="page-btn" id="prev-btn" onclick="changePage(-1)" disabled>← Назад</button>
-            <span class="page-counter">Страница <span id="current-page-num">1</span> из 3</span>
-            <button class="page-btn" id="next-btn" onclick="changePage(1)">Вперед →</button>
-        </div>
+    <header>
+        <span class="logo-text">ZooGO</span>
     </header>
 
-    <main>
-        <div id="animal-page-1" class="main-content animal-page active-page">
-            <div class="card leopard" onclick="openAnimal('Леопард', 'Леопарды — мастера маскировки. Они могут бесшумно передвигаться и забираться на деревья, даже держа в зубах тяжелую добычу.', 'https://scientificrussia.ru')">
-            <div class="overlay-button">
-                    <h3>Леопард</h3>
-                    <p>Нажми чтобы узнать</p>
-                </div>
-            </div>
-            <div class="card raccoon" onclick="openAnimal('Енот', 'Еноты крайне сообразительны. Их передние лапы настолько чувствительны и развиты, что они могут легко открывать замки, задвижки и мыть еду в воде.', 'https://unsplash.com')">
-            <div class="overlay-button">
-                    <h3>Енот</h3>
-                    <p>Нажми чтобы узнать</p>
-                </div>
-            </div>
-            <div class="card tiger" onclick="openAnimal('Тигр', 'Тигр — самая крупная кошка на Земле. Каждый тигр имеет уникальный узор из полос, который находится не только на шерсти, но и на самой коже.', 'https://unsplash.com')">
-                <div class="overlay-button">
-                    <h3>Тигр</h3>
-                    <p>Нажми чтобы узнать</p>
-                </div>
-            </div>
+    <main class="animals-container">
+    
+        <div class="animal-column leopard-bg" data-animal="Леопард">
+            <button class="animal-button">
+                <h2>Леопард</h2>
+                <p>Нажми чтобы узнать</p>
+            </button>
         </div>
-        <div id="animal-page-2" class="main-content animal-page">
-            <div class="card lion" onclick="openAnimal('Лев', 'Рык взрослого льва настолько громок, что его можно услышать на расстоянии до 8 километров. Львы живут в семейных группах — прайдах.', 'https://unsplash.com')">
-            <div class="overlay-button">
-                    <h3>Лев</h3>
-                    <p>Нажми чтобы узнать</p>
-                </div>
-            </div>
-            <div class="card panda" onclick="openAnimal('Панда', 'Большие панды тратят до 12 часов в день на поедание бамбука. Несмотря на это, их пищеварительная система устроена как у хищников.', 'https://unsplash.com')">
-            <div class="overlay-button">
-                    <h3>Панда</h3>
-                    <p>Нажми чтобы узнать</p>
-                </div>
-            </div>
-            <div class="card bear" onclick="openAnimal('Медведь', 'У медведей невероятно острое обоняние. Они могут учуять пищу или запах опасности на расстоянии в несколько километров, что превосходит возможности собак.', 'https://unsplash.com')">
-            <div class="overlay-button">
-                    <h3>Медведь</h3>
-                    <p>Нажми чтобы узнать</p>
-                </div>
-            </div>
+        
+        <div class="animal-column raccoon-bg" data-animal="Енот">
+            <button class="animal-button">
+                <h2>Енот</h2>
+                <p>Нажми чтобы узнать</p>
+            </button>
         </div>
-        <div id="animal-page-3" class="main-content animal-page">
-            <div class="card wolf" onclick="openAnimal('Волк', 'Волки способны преодолевать огромные расстояния в поисках пищи. Они общаются с помощью воя, передавая информацию на большие расстояния.', 'https://unsplash.com')">
-            <div class="overlay-button">
-                    <h3>Волк</h3>
-                    <p>Нажми чтобы узнать</p>
-                </div>
-            </div>
-            <div class="card fox" onclick="openAnimal('Лиса', 'Лисы используют свой пушистый хвост не только для красоты, но и для баланса во время бега, а зимой укрываются им от сильных морозов.', 'https://unsplash.com')">
-            <div class="overlay-button">
-                    <h3>Лиса</h3>
-                    <p>Нажми чтобы узнать</p>
-                </div>
-            </div>
-            <div class="card deer" onclick="openAnimal('Олень', 'Рога северных оленей уникальны тем, что они растут как у самцов, так и у самок. Каждый год они сбрасывают их, чтобы вырастить новые.', 'https://unsplash.com')">
-            <div class="overlay-button">
-                    <h3>Олень</h3>
-                    <p>Нажми чтобы узнать</p>
-            </div>
+
+        <div class="animal-column tiger-bg" data-animal="Тигр">
+            <button class="animal-button">
+                <h2>Тигр</h2>
+                <p>Нажми чтобы узнать</p>
+            </button>
         </div>
-    </div>
+
     </main>
 
-    <footer class="footer">
-        <div class="contact-block">
-            <div class="phone">8 800 770-00-22</div>
-            <div class="subtext">связаться с нами</div>
-        </div>
-        <div class="info-block">
-            <p>Горячая линия: 09:00 — 21:00 МСК</p>
-            <p>Доставка осуществляется: 10:00 — 22:00</p>
+    <footer>
+        <a href="tel:88007700022" class="phone-link">8 800 770-00-22</a>
+        <div>связаться с нами</div>
+        <div class="footer-schedule">
+            Горячая линия: 09:00 — 21:00 МСК &nbsp;&nbsp;&nbsp;&nbsp; Доставка осуществляется: 10:00 — 22:00
         </div>
     </footer>
-    <div id="details-page">
-        <div class="info-box">
-            <h1 id="animal-name"></h1>
-            <p id="animal-desc"></p>
-            <div class="back-btn" onclick="closeDetails()">← Назад на главную</div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
